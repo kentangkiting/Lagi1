@@ -10,6 +10,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.fujitsu.lagi.BuatDisplayMessage"
-    tools:showIn="@layout/activity_buat_display_message">
+    tools:showIn="@layout/activity_buat_display_message"
+    android:id="@+id/mencobaBuatDisplay">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
 
 </RelativeLayout>

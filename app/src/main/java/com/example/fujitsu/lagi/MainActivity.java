@@ -1,5 +1,6 @@
 package com.example.fujitsu.lagi;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,9 +9,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
 
 public class MainActivity extends AppCompatActivity {
-
+    public static String EXTRA_MESSAGE = "com.example.fujitsu.lagi";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,5 +54,27 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void cobaClick(View view){
+        Intent intents = new Intent(this,BuatDisplayMessage.class);
+        EditText test = (EditText)findViewById(R.id.editText3);
+        String coba = test.getText().toString();
+        intents.putExtra(EXTRA_MESSAGE,coba);
+        startActivity(intents);
+
+    }
+
+    public void testInvoke(View view)
+    {
+
+
+    }
+
+    public void invokeWS (RequestParams requestParams)
+    {
+
+
     }
 }

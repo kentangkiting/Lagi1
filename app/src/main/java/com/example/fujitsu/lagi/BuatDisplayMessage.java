@@ -1,11 +1,14 @@
 package com.example.fujitsu.lagi;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class BuatDisplayMessage extends AppCompatActivity {
 
@@ -24,6 +27,18 @@ public class BuatDisplayMessage extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Intent intents = getIntent();
+        String message = intents.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        TextView tesText = new TextView(this);
+        tesText.setTextSize(40);
+        tesText.setText(message);
+
+        RelativeLayout testLayout = (RelativeLayout)findViewById(R.id.mencobaBuatDisplay);
+        testLayout.addView(tesText);
     }
+
 
 }
