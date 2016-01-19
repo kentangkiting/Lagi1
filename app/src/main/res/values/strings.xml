@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Lagi</string>
     <string name="action_settings">Settings</string>
+    <string name="siapa"> Siapa :</string>
+    <string name="textInput1">Isi siapa kek</string>
+    <string name="title_activity_buat_display_message">BuatDisplayMessage</string>
 </resources>

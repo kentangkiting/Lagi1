@@ -12,8 +12,34 @@
     tools:context="com.example.fujitsu.lagi.MainActivity"
     tools:showIn="@layout/activity_main">
 
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="@string/siapa"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+         />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText3"
+        android:layout_alignTop="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/textInput1"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="TEST!"
+        android:onClick="cobaClick"/>
+
+
 </RelativeLayout>
