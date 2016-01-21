@@ -47,7 +47,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonTest"
         android:text="cobaInvoke"
-        android:onClick="testInvoke"/>
+        android:onClick="testInvoke"
+        android:id="@+id/button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp" />
 
 
 </RelativeLayout>
