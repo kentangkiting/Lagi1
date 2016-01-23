@@ -33,7 +33,7 @@ import java.net.URLConnection;
 public class MainActivity extends AppCompatActivity {
     public static String EXTRA_MESSAGE = "com.example.fujitsu.lagi";
     public static String EXTRA_MESSAGE2 = "com.example.fujitsu.lagi";
-    public static String apiUrl = "http://192.168.90.112:7001/Application14-RestTestLagi-context-root/jersey/test123";
+    public static String apiUrl = "http://192.168.1.124:8080/RestPractice/crunchify/ftocservice/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +87,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void testInvoke (View view){
-        String url = apiUrl;
+        EditText coba = (EditText)findViewById(R.id.editText);
+        String param = coba.getText().toString();
+        String url = apiUrl+param;
         new callApi().execute(url);
 
     }
